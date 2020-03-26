@@ -1,0 +1,17 @@
+    1  clear
+    2  sudo apt-get install postfix mailutils -y
+    3  clear
+    4  sudo nano /etc/postfix/sasl_passwd
+    5  sudo chmod 600 /etc/postfix/sasl_passwd
+    6  sudo nano /etc/postfix/main.cf
+    7  clear
+    8  sudo nano /etc/postfix/main.cf
+    9  sudo postmap /etc/postfix/sasl_passwd
+   10  sudo nano /etc/aliases
+   11  sudo newaliases
+   12  sudo ufw allow 587
+   13  sudo systemctl restart postfix
+   14  echo "Postfix email" | mail -s "Email from `hostname`" root
+   15  echo "Postfix email" | mail -s "Email from `hostname`" basilmathai14@gmail.com
+   16  History > myhistory.txt
+   17  history > myhistory.txt
